@@ -17,3 +17,15 @@ CREATE TABLE Users (
 ),
     phone_number VARCHAR(14)
 );
+
+
+--MATCHES TABLE
+CREATE TABLE Matches (
+    match_id INT PRIMARY KEY,
+    fixture VARCHAR(200) NOT NULL,
+    tournament_category VARCHAR(100),
+    base_ticket_price DECIMAL(10,2) NOT NULL CHECK (base_ticket_price >= 0),
+    match_status VARCHAR(25) CHECK (match_status IN 
+    ('Available','Selling Fast','Sold Out','Postponed')
+  )
+);
