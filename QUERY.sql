@@ -29,3 +29,16 @@ CREATE TABLE Matches (
     ('Available','Selling Fast','Sold Out','Postponed')
   )
 );
+
+--BOOKINGS TABLE
+CREATE TABLE Bookings (
+    booking_id INT PRIMARY KEY,
+    user_id INT,
+    match_id INT,
+    seat_number VARCHAR(15),
+    payment_status VARCHAR(25) CHECK (payment_status IN 
+    ('Pending','Confirmed','Cancelled','Refunded')),
+    total_cost DECIMAL(10,2) CHECK (total_cost >= 0),
+    FOREIGN KEY (user_id) REFERENCES Users(user_id),
+    FOREIGN KEY (match_id) REFERENCES Matches(match_id)
+);
