@@ -1,4 +1,4 @@
-# Football Ticket Booking System — Database Design & SQL Queries
+# Football Ticket Booking System -- Database Design & SQL Queries
 
 A relational database project simulating a football ticket booking platform, covering ERD design, table relationships, and SQL query writing (joins, subqueries, aggregations, pattern matching, and pagination).
 
